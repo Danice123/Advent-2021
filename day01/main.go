@@ -1,21 +1,12 @@
-package day1
+package day01
 
 import (
-	"os"
+	"advent2021/helper"
 	"strconv"
-	"strings"
 )
 
-func readInput() []string {
-	data, err := os.ReadFile("day1/input.txt")
-	if err != nil {
-		panic(err)
-	}
-	return strings.Split(string(data), "\n")
-}
-
 func Part1() {
-	depths := readInput()
+	depths := helper.ReadInput("day01/input.txt")
 	depthList := make([]int, len(depths))
 	increases := 0
 	for i, depth := range depths {
@@ -33,7 +24,7 @@ func Part1() {
 }
 
 func Part2() {
-	depths := readInput()
+	depths := helper.ReadInput("day01/input.txt")
 	depthList := make([]int, len(depths))
 	increases := 0
 	for i, depth := range depths {
