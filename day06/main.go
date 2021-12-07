@@ -7,16 +7,7 @@ import (
 )
 
 func Part1() {
-	data := helper.ReadInput("day06/input.txt")[0]
-
-	fish := []int{}
-	for _, s := range strings.Split(data, ",") {
-		i, err := strconv.Atoi(s)
-		if err != nil {
-			panic(err)
-		}
-		fish = append(fish, i)
-	}
+	fish := helper.ReadNumberList("day06/input.txt")
 
 	for t := 0; t < 80; t++ {
 		newFish := []int{}
